@@ -8,7 +8,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/postgresql/repos/apt/README -O postgre
 wget https://mirrors.tuna.tsinghua.edu.cn/postgresql/repos/apt/ACCC4CF8.asc -O postgresql-ACCC4CF8.asc
 
 # cat 314DF160.gpg | sudo apt-key add -
-gpg --export --armor 314DF160
+gpg --keyserver keyserver.ubuntu.com --recv 314DF160
 gpg --export --armor 314DF160 >314DF160.gpg
 
 BASE_PATH=`dirname $(readlink -f $0)`
